@@ -16,4 +16,5 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'rango/about.html')
+    context_dict = {'boldmessage' : 'Elliott'}
+    return render(request, 'rango/about.html', context=context_dict)

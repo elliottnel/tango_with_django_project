@@ -11,15 +11,18 @@
         <h1>Rango says...</h1>
         <div>
             here is the about page. <br />
-            <strong>{{ howdy partner }}</strong><br />
-            <a href="/">Index</a>
+            This tutorial has been put together by {{ boldmessage}}
         </div>
         <div>
-            <a href="/rango/about/">About</a><br />
-            <img src="{% static 'rango.jpg' %}" alt="Picture of Rango">
-            <a href="{% url 'index' %}">Back to the index page</a>
+            <a href="/"> Index </a><br /> 
+        </div>
+        <div>
+            <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango"/>
+        </div>
+        <div>
+            <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat"/>
         </div>
     </body>
+
 </html>
 
-<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat">
