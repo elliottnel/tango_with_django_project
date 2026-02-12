@@ -23,7 +23,7 @@ class Category(models.Model):
 class Page(models.Model):
     title = models.CharField(max_length=128)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    url = models.URLField()
+    url = models.URLField(max_length=200)
     views = models.IntegerField(default=0)
 
     def __str__(self):
