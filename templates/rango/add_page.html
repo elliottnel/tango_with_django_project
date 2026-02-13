@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Page</title>
-</head>
-<body>
+{% extends 'rango/base.html' %}
+{% load static %}
+
+{% block title_block %}
+Add a Page
+{% endblock %}
+{% block body_block %}
     <h1>Add a Page to {{ category.name }}</h1>
 
     {% if category %}
@@ -32,5 +33,5 @@
     {% endif %}
 
     <p><a href="{% url 'rango:show_category' category.slug %}">Back to Category</a></p>
-</body>
-</html>
+{% endblock %}
+
