@@ -27,5 +27,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('category/<slug:category_name_slug>/',
         views.show_category, name='show_category'),
+        path('restricted/', views.restricted, name='restricted'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

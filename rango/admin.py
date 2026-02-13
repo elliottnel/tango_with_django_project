@@ -1,5 +1,5 @@
 from django.contrib import admin
-from rango.models import Category, Page
+from rango.models import Category, Page, UserProfile
 
 # Customize Page display
 class PageAdmin(admin.ModelAdmin):
@@ -8,7 +8,12 @@ class PageAdmin(admin.ModelAdmin):
 # Register Page with PageAdmin
 admin.site.register(Page, PageAdmin)
 
+# Register UserProfile separately
+admin.site.register(UserProfile)
+
+# Customize Category display
 class CategoryAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug':('name',)}
-# Update the registration to include this customised interface
+    prepopulated_fields = {'slug': ('name',)}
+
+# Register Category with CategoryAdmin
 admin.site.register(Category, CategoryAdmin)
